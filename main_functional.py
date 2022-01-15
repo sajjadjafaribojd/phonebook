@@ -7,8 +7,7 @@ def generate_phone_number(Prefix_number,q):
     for total in range(0,q):
         for num in range(0,7):
             n=random.randint(0,9)
-            num_arr.append(n)
-       
+            num_arr.append(n)    
         if num == 6:
             for j in num_arr:
                 final=final+str(j)  
@@ -18,6 +17,11 @@ def generate_phone_number(Prefix_number,q):
             
     return phonebook_arr
 
-phonebook= generate_phone_number(Prefix_number=["0915","0912","0910"],quantity=1500)
+
+#Inital value
+Prefix_number=["0915","0912","0910"]
+quantity=1500
+
+phonebook= generate_phone_number(Prefix_number,quantity)
 for phone_number in phonebook:
     print (phone_number)
