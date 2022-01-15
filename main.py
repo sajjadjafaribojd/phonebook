@@ -1,7 +1,7 @@
 import random
 
 num_arr=[]
-Prefix_number="0915"
+Prefix_number=["0915","0912","0910"]
 final=""
 for total in range(0,500):
     for num in range(0,7):
@@ -11,7 +11,7 @@ for total in range(0,500):
         if num == 6:
             for j in num_arr:
                 final=final+str(j)  
-            print(Prefix_number+final+"\n")    
+            print(random.choice(Prefix_number)+final+"\n")    
             num_arr.clear()
             final=""
         
