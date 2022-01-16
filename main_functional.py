@@ -7,14 +7,11 @@ def generate_phone_number(Prefix_number,q):
     for total in range(0,q):
         for num in range(0,7):
             n=random.randint(0,9)
-            num_arr.append(n)    
+            num_arr.append(n)
+            final=final+str(n)  
         if num == 6:
-            for j in num_arr:
-                final=final+str(j)  
             phonebook_arr.append(random.choice(Prefix_number)+final)
-            num_arr.clear()
             final=""
-            
     return phonebook_arr
 
 
